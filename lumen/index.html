@@ -47,6 +47,7 @@
   --bronze:#8E714F;
   --ease:cubic-bezier(.22,1,.36,1);
   --container:1280px;
+  --announce-h:36px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -92,12 +93,13 @@ h3.display{font-size:clamp(1.6rem,3vw,2.4rem)}
 .pre-curtain{position:fixed;inset:0;z-index:9998;background:var(--ink);transform-origin:top;pointer-events:none}
 
 /* ============================================================ header */
-.announce{position:fixed;top:0;left:0;width:100%;z-index:120;background:transparent;
-  text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);
-  padding:9px 0;opacity:0;transition:opacity .5s}
-.site-header{position:fixed;top:0;left:0;width:100%;z-index:100;padding:26px 0;
-  transition:padding .4s var(--ease),background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
-.site-header.scrolled{padding:14px 0;background:rgba(11,11,13,.72);backdrop-filter:blur(14px);border-bottom-color:var(--line-dark)}
+.announce{position:fixed;top:0;left:0;width:100%;z-index:90;height:var(--announce-h);background:var(--ink);
+  display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);
+  opacity:0;transition:opacity .5s,transform .4s var(--ease)}
+.announce.hide{transform:translateY(-100%);opacity:0!important}
+.site-header{position:fixed;top:var(--announce-h);left:0;width:100%;z-index:100;padding:22px 0;
+  transition:top .4s var(--ease),padding .4s var(--ease),background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+.site-header.scrolled{top:0;padding:14px 0;background:rgba(11,11,13,.72);backdrop-filter:blur(14px);border-bottom-color:var(--line-dark)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo-link{display:block;width:200px;color:var(--ivory)}
 .logo-link svg{width:100%;height:auto}
@@ -298,6 +300,10 @@ h3.display{font-size:clamp(1.6rem,3vw,2.4rem)}
   .cherry-points{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr 1fr;gap:40px 20px}
   .method-card{grid-template-columns:1fr;gap:14px;top:11vh}
+  .h-section{overflow:visible}
+  .h-track{flex-direction:column;width:auto;gap:18px;padding:34px clamp(20px,5vw,64px) 70px}
+  .t-card{width:100%;aspect-ratio:4/3}
+  .h-progress{display:none}
 }
 @media (max-width:760px){
   .main-nav{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;gap:30px;
@@ -316,6 +322,8 @@ h3.display{font-size:clamp(1.6rem,3vw,2.4rem)}
   .sticky-book{background:var(--gold);color:var(--ink)}
   .sticky-wa{background:#1FA855;color:#fff}
   .wa-float{bottom:78px}
+  .announce{display:none}
+  .site-header{top:0}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -678,9 +686,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
   window.addEventListener('pointermove',e=>{ tMouse=[e.clientX/window.innerWidth, 1-e.clientY/window.innerHeight]; });
   const start=performance.now();
   function render(now){
-    mouse[0]+=(tMouse[0]-mouse[0])*0.04; mouse[1]+=(tMouse[1]-mouse[1])*0.04;
-    gl.uniform1f(uT,(now-start)/1000); gl.uniform2f(uR,canvas.width,canvas.height); gl.uniform2f(uM,mouse[0],mouse[1]);
-    gl.drawArrays(gl.TRIANGLES,0,3);
+    if(!document.hidden){
+      mouse[0]+=(tMouse[0]-mouse[0])*0.04; mouse[1]+=(tMouse[1]-mouse[1])*0.04;
+      gl.uniform1f(uT,(now-start)/1000); gl.uniform2f(uR,canvas.width,canvas.height); gl.uniform2f(uM,mouse[0],mouse[1]);
+      gl.drawArrays(gl.TRIANGLES,0,3);
+    }
     if(!reduceMotion) requestAnimationFrame(render);
   }
   requestAnimationFrame(render);
@@ -690,10 +700,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 function startSite(){
   document.body.classList.remove('loading');
   const tl = gsap.timeline();
+  const pth=document.querySelector('#preloader .pre-mark path'); const L=pth.getTotalLength();
+  gsap.set(pth,{strokeDasharray:L,strokeDashoffset:L});
   tl.to('#preNum',{innerText:100,duration:1.1,snap:{innerText:1},ease:'power2.out'},0)
-    .fromTo('#preloader .pre-mark path',{drawSVG:'0%'},{duration:1.1,ease:'power2.inOut',
-        onStart(){ const pth=document.querySelector('#preloader .pre-mark path'); const L=pth.getTotalLength();
-          pth.style.strokeDasharray=L; gsap.fromTo(pth,{strokeDashoffset:L},{strokeDashoffset:0,duration:1.1,ease:'power2.inOut'}); }},0)
+    .to(pth,{strokeDashoffset:0,duration:1.1,ease:'power2.inOut'},0)
     .to('#preloader',{opacity:0,duration:.5,ease:'power2.out'},'+=0.15')
     .set('#preloader',{display:'none'})
     .to('#preCurtain',{scaleY:0,transformOrigin:'bottom',duration:.9,ease:'expo.inOut'},'-=0.1')
@@ -797,8 +807,8 @@ document.querySelectorAll('[data-count]').forEach(el=>{
 });
 
 /* ---------------------------------------- header + announce on scroll */
-const header=document.getElementById('header');
-ScrollTrigger.create({start:'top -40',onUpdate:s=>header.classList.toggle('scrolled',s.scroll()>40)});
+const header=document.getElementById('header'), announceEl=document.getElementById('announce');
+ScrollTrigger.create({start:'top -40',onUpdate:s=>{ const sc=s.scroll()>40; header.classList.toggle('scrolled',sc); announceEl.classList.toggle('hide',sc); }});
 
 /* ---------------------------------------- custom cursor + magnetic */
 if(fine && !reduceMotion){
