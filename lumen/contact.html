@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Contact &amp; Visit | Continuum Aesthetics, Brickell Miami</title>
+<meta name="description" content="Reach Continuum Aesthetics your way. Book online, WhatsApp, call or text 786.790.9217, or email. 175 SW 7th Street, Suite 1411, Brickell, Miami. Complimentary valet, by appointment only.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact &amp; Visit | Continuum Aesthetics">
+<meta property="og:description" content="Book, WhatsApp, call or email Dr. Brunson's Brickell suite. Complimentary valet, by appointment only.">
+<meta property="og:image" content="../current/assets/og.jpg">
+<meta name="theme-color" content="#0B0B0D">
+<link rel="icon" type="image/svg+xml" href="../current/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Continuum Aesthetics",
+  "description": "Physician-led medspa in Brickell, Miami offering injectables, regenerative skin treatments, peptides, GLP-1 weight management, BHRT and hair restoration.",
+  "telephone": "+1-786-790-9217",
+  "email": "info@continuumaesthetics.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "175 SW 7th Street, Suite 1411", "addressLocality": "Miami", "addressRegion": "FL", "postalCode": "33130", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 25.7674432, "longitude": -80.196822 },
+  "sameAs": [ "https://www.instagram.com/continuumaesthetics", "https://maps.google.com/?cid=13139619741760947504" ],
+  "founder": { "@type": "Physician", "name": "Adam Brunson, MD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "30" }
+}
+</script>
+<link rel="stylesheet" href="./styles.css">
+<style>
+/* ---- shared subpage hero (luminous-noir) ---- */
+.page-hero{position:relative;padding:calc(var(--announce-h) + 150px) 0 clamp(54px,8vh,96px);overflow:hidden;border-bottom:1px solid var(--line-dark)}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(110% 90% at 78% 8%,rgba(201,160,90,.22),transparent 56%),
+  radial-gradient(80% 80% at 8% 100%,rgba(142,113,79,.20),transparent 60%)}
+.page-hero .container{position:relative;z-index:1}
+.page-hero .kicker{display:block;margin-bottom:22px}
+.page-hero h1.display{font-size:clamp(2.7rem,8vw,6.4rem)}
+.page-hero .lede{margin-top:26px;max-width:60ch;color:rgba(244,239,230,.82)}
+/* ---- channel cards ---- */
+.channel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.channel-card{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line-dark);border-radius:8px;
+  padding:clamp(24px,3vw,34px);background:var(--ink-soft);transition:border-color .4s,transform .4s var(--ease),background .4s}
+.channel-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.channel-card .kicker{color:var(--gold)}
+.channel-card strong{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--ivory);line-height:1.15}
+.channel-card span.ctx{font-size:14.5px;color:rgba(244,239,230,.72);line-height:1.6}
+.channel-card .t-go{margin-top:8px}
+/* ---- support block ---- */
+.support-img{border-radius:6px;overflow:hidden;aspect-ratio:4/5}
+.support-img img{width:100%;height:100%;object-fit:cover}
+/* ---- visit + map ---- */
+.map-embed{border-radius:8px;overflow:hidden;border:1px solid var(--line-light);aspect-ratio:4/3;background:#e3dac9}
+.map-embed iframe{width:100%;height:100%;border:0;display:block}
+/* ---- lead form ---- */
+.wrap-narrow{max-width:760px;margin:0 auto}
+.lead-form{margin-top:8px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field.full{grid-column:1 / -1}
+.form-field label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);font-weight:500}
+.form-field input,.form-field select,.form-field textarea{
+  font-family:'Jost',sans-serif;font-size:15.5px;color:var(--text-dark);background:#fff;
+  border:1px solid var(--line-light);border-radius:6px;padding:13px 15px;width:100%;transition:border-color .3s}
+.form-field textarea{min-height:120px;resize:vertical}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--bronze)}
+.form-consent{display:flex;gap:11px;align-items:flex-start;font-size:13.5px;letter-spacing:0;text-transform:none;color:#4a4338;font-weight:300;line-height:1.5}
+.form-consent input{width:auto;margin-top:3px;accent-color:var(--bronze)}
+.lead-form .btn{margin-top:24px}
+.form-note{margin-top:16px;font-size:12.5px;color:#6a5f50;max-width:60ch}
+@media (max-width:640px){.channel-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="loading">
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- ===================================================== preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="pre-mark" viewBox="0 0 64 36" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 18 C27.6 10 20.6 6 14.6 6 C7.4 6 2 11.4 2 18 C2 24.6 7.4 30 14.6 30 C20.6 30 27.6 26 32 18 C36.4 10 43.4 6 49.4 6 C56.6 6 62 11.4 62 18 C62 24.6 56.6 30 49.4 30 C43.4 30 36.4 26 32 18 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <div class="pre-count"><span id="preNum">0</span> &middot; CONTINUUM</div>
+</div>
+<div class="pre-curtain" id="preCurtain" aria-hidden="true"></div>
+
+<!-- ===================================================== announce + header -->
+<div class="announce" id="announce">Complimentary valet &middot; Brickell, Miami &middot; Financing by Cherry</div>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a class="logo-link" href="./index.html" aria-label="Continuum Aesthetics home" data-cursor>
+      <svg viewBox="0 0 332 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Continuum Aesthetics">
+        <path d="M30 32 C25.6 24 18.6 20 12.6 20 C5.4 20 0 25.4 0 32 C0 38.6 5.4 44 12.6 44 C18.6 44 25.6 40 30 32 C34.4 24 41.4 20 47.4 20 C54.6 20 60 25.4 60 32 C60 38.6 54.6 44 47.4 44 C41.4 44 34.4 40 30 32 Z" transform="translate(2 0)" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <text x="76" y="37" font-family="Jost, sans-serif" font-size="23" font-weight="500" letter-spacing="5.5" fill="currentColor">CONTINUUM</text>
+        <text x="77" y="56" font-family="Jost, sans-serif" font-size="10.5" font-weight="400" letter-spacing="7.2" opacity="0.78" fill="currentColor">AESTHETICS</text>
+      </svg>
+    </a>
+    <nav class="main-nav" id="nav" aria-label="Primary">
+      <a href="./treatments.html" data-cursor>Treatments</a>
+      <a href="./concerns.html" data-cursor>Concerns</a>
+      <a href="./method.html" data-cursor>The Method</a>
+      <a href="./dr-adam-brunson.html" data-cursor>Dr. Brunson</a>
+      <a href="./financing.html" data-cursor>Financing</a>
+      <a href="./contact.html" data-cursor aria-current="page">Contact</a>
+      <a class="header-book magnetic" href="./book.html" data-cursor>Book<span class="arrow" aria-hidden="true">&#8594;</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================================================== hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker eyebrow-rule">Contact &amp; Visit</span>
+      <h1 class="display" data-reveal>Reach us<br>your <span class="it">way</span></h1>
+      <p class="lede" data-reveal>Ready to book, or just have a question? Pick the channel that suits you. Every one of them reaches the practice directly, never a call center.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================== channels -->
+  <section class="section">
+    <div class="container">
+      <div class="channel-grid">
+        <a class="channel-card" href="./book.html" data-reveal data-cursor>
+          <span class="kicker">Book</span>
+          <strong>Book online</strong>
+          <span class="ctx">Pick a time in minutes through our scheduler. Consultations and treatments are by appointment only.</span>
+          <span class="t-go">Open booking <span class="arrow">&#8594;</span></span>
+        </a>
+        <a class="channel-card" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener" data-reveal data-cursor>
+          <span class="kicker">WhatsApp</span>
+          <strong>Chat with us</strong>
+          <span class="ctx">The fastest way to reach us. We typically reply within minutes during office hours.</span>
+          <span class="t-go">Message us <span class="arrow">&#8594;</span></span>
+        </a>
+        <a class="channel-card" href="tel:+17867909217" data-reveal data-cursor>
+          <span class="kicker">Call or Text</span>
+          <strong>786.790.9217</strong>
+          <span class="ctx">Talk to the practice directly. Texting works too if you are between meetings.</span>
+          <span class="t-go">Call or text <span class="arrow">&#8594;</span></span>
+        </a>
+        <a class="channel-card" href="mailto:info@continuumaesthetics.com" data-reveal data-cursor>
+          <span class="kicker">Email</span>
+          <strong>info@continuumaesthetics.com</strong>
+          <span class="ctx">Best for non-urgent questions, records, and anything with attachments.</span>
+          <span class="t-go">Send an email <span class="arrow">&#8594;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== post-treatment support -->
+  <section class="section light">
+    <div class="container grid-2">
+      <div class="support-img media-card media-clip" data-reveal data-clip>
+        <img src="../meridian/assets/hands-phone.jpg" alt="Hands holding a phone mid message" loading="lazy" onerror="this.src='../current/assets/cream-texture.jpg'">
+      </div>
+      <div>
+        <span class="kicker eyebrow-rule" data-reveal>Post-Treatment Support</span>
+        <h2 class="display" data-reveal style="margin-top:18px">Already treated?<br>We are still <span class="it">here</span></h2>
+        <p data-reveal style="margin-top:22px;max-width:54ch;color:#4a4338">Questions after a treatment are normal, and you should never feel like you are bothering us. Message us on WhatsApp or text 786.790.9217 with your name and your question, and the practice will get back to you directly. Aftercare guidance from your visit always applies first.</p>
+        <p data-reveal style="margin-top:14px;max-width:54ch;color:#4a4338;font-size:15px">For any medical emergency, call 911 or go to the nearest emergency department first.</p>
+        <div class="act-row">
+          <a class="btn magnetic" href="https://wa.me/17867909217?text=Hi%2C%20I%20had%20a%20treatment%20and%20have%20a%20question" target="_blank" rel="noopener" data-cursor>Message about a treatment<span class="arrow" aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== visit + map -->
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <span class="kicker eyebrow-rule" data-reveal>Visit</span>
+        <h2 class="display" data-reveal style="margin-top:18px">Finding the<br><span class="it">suite</span></h2>
+        <ul class="visit-list" style="color:var(--ivory)">
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><span><strong>175 SW 7th Street, Suite 1411</strong><br>Miami, FL 33130, in the heart of Brickell</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14M7 17l1.2-7.2A2 2 0 0 1 10.2 8h3.6a2 2 0 0 1 2 1.8L17 17"/></svg><span><strong>Complimentary valet</strong> at the building entrance, then take the elevator to the 14th floor</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span><strong>By appointment only.</strong> Book first, then arrive and breathe.</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg><span><strong>Text, WhatsApp or call:</strong> <a href="tel:+17867909217" style="color:var(--gold)">786.790.9217</a></span></li>
+        </ul>
+        <div class="act-row">
+          <a class="btn-ghost" href="https://maps.google.com/?cid=13139619741760947504" target="_blank" rel="noopener" data-cursor>Open in Google Maps<span class="arrow" aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="map-embed" data-reveal>
+        <iframe src="https://www.google.com/maps?q=175+SW+7th+Street+Suite+1411+Miami+FL+33130&output=embed" title="Map to Continuum Aesthetics, 175 SW 7th Street, Suite 1411, Miami FL 33130" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== lead form -->
+  <section class="section light" id="lead">
+    <div class="wrap-narrow container">
+      <div class="section-head" data-reveal style="margin-bottom:36px">
+        <span class="kicker eyebrow-rule">Not Ready to Book?</span>
+        <h2 class="display" style="margin-top:18px">Tell us what you are<br><span class="it">curious</span> about</h2>
+        <p style="margin-top:18px;color:#4a4338;max-width:58ch">Send a short note and we will follow up the way you prefer. No pressure, no spam, just an answer.</p>
+      </div>
+      <form class="lead-form" id="lead-form" action="mailto:info@continuumaesthetics.com" method="post" enctype="text/plain" data-reveal>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="lf-name">Name</label>
+            <input type="text" id="lf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="lf-phone">Phone</label>
+            <input type="tel" id="lf-phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="form-field full">
+            <label for="lf-email">Email</label>
+            <input type="email" id="lf-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="lf-procedure">Treatment of interest</label>
+            <select id="lf-procedure" name="procedure">
+              <option>Consultation (start here if unsure)</option>
+              <option>Botulinum toxin</option>
+              <option>Hyaluronic acid fillers</option>
+              <option>Sculptra</option>
+              <option>Radiesse</option>
+              <option>PRF</option>
+              <option>Exosomes</option>
+              <option>Microneedling</option>
+              <option>Chemical peel</option>
+              <option>Peptides</option>
+              <option>Weight loss / GLP-1</option>
+              <option>BHRT</option>
+              <option>Male hormone consultation</option>
+              <option>Hair restoration</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="lf-contact">Preferred contact method</label>
+            <select id="lf-contact" name="contact_method">
+              <option>WhatsApp</option>
+              <option>Text</option>
+              <option>Call</option>
+              <option>Email</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="lf-message">Your question (optional)</label>
+            <textarea id="lf-message" name="message" placeholder="Anything you want us to know before we reply"></textarea>
+          </div>
+          <div class="form-field full">
+            <label class="form-consent" for="lf-consent">
+              <input type="checkbox" id="lf-consent" required>
+              <span>I agree to be contacted by Continuum Aesthetics about my inquiry. This form is not for medical emergencies.</span>
+            </label>
+          </div>
+        </div>
+        <button class="btn magnetic" type="submit">Send my question<span class="arrow" aria-hidden="true">&#8594;</span></button>
+        <p class="form-note">This concept form opens your email app with your message pre-filled, addressed to info@continuumaesthetics.com. Prefer something instant? WhatsApp or text 786.790.9217.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================================================== prefooter -->
+  <section class="section prefooter">
+    <div class="container">
+      <span class="kicker" data-reveal>Ready when you are</span>
+      <h2 class="display" data-reveal>Or just book the<br><span class="it">consultation</span></h2>
+      <div class="prefooter-actions" data-reveal>
+        <a class="btn magnetic" href="./book.html" data-cursor>Book a Consultation<span class="arrow" aria-hidden="true">&#8594;</span></a>
+        <a class="btn-ghost" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener" data-cursor>Chat on WhatsApp</a>
+      </div>
+      <p class="prefooter-note" data-reveal>The fastest way to real answers is unhurried time with Dr. Brunson. Call or text <a href="tel:+17867909217">786.790.9217</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- ===================================================== footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 332 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Continuum Aesthetics">
+          <path d="M30 32 C25.6 24 18.6 20 12.6 20 C5.4 20 0 25.4 0 32 C0 38.6 5.4 44 12.6 44 C18.6 44 25.6 40 30 32 C34.4 24 41.4 20 47.4 20 C54.6 20 60 25.4 60 32 C60 38.6 54.6 44 47.4 44 C41.4 44 34.4 40 30 32 Z" transform="translate(2 0)" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <text x="76" y="37" font-family="Jost, sans-serif" font-size="23" font-weight="500" letter-spacing="5.5" fill="currentColor">CONTINUUM</text>
+          <text x="77" y="56" font-family="Jost, sans-serif" font-size="10.5" font-weight="400" letter-spacing="7.2" opacity="0.78" fill="currentColor">AESTHETICS</text>
+        </svg>
+        <p>Physician-led aesthetic and wellness medicine in Brickell, Miami. Subtle results, medical standards, every chapter.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="./treatments.html">Treatments</a></li><li><a href="./concerns.html">Concerns</a></li><li><a href="./method.html">The Method</a></li><li><a href="./dr-adam-brunson.html">Dr. Brunson</a></li><li><a href="./financing.html">Financing</a></li><li><a href="./book.html">Book</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+17867909217">786.790.9217</a></li><li><a href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:info@continuumaesthetics.com">info@continuumaesthetics.com</a></li><li><a href="https://www.instagram.com/continuumaesthetics" target="_blank" rel="noopener">Instagram</a></li><li><a href="./contact.html">Visit &amp; directions</a></li></ul></div>
+      <div class="footer-col"><h4>Visit</h4><address>175 SW 7th Street, Suite 1411<br>Miami, FL 33130<br>Brickell</address><p style="color:var(--muted);font-size:12.5px;margin-top:14px">By appointment only. Complimentary valet.</p><p style="margin-top:14px"><a class="hero-stars" href="https://maps.google.com/?cid=13139619741760947504" target="_blank" rel="noopener" data-cursor><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>5.0 from 30 Google reviews</span></a></p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Continuum Aesthetics. All Rights Reserved.</p>
+      <p>Individual results may vary. All treatments are performed under physician supervision following an in-person consultation.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================================================== whatsapp float -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-panel">
+    <div class="wa-panel-head">
+      <div class="wa-avatar"><svg viewBox="0 0 64 36" width="44"><path d="M32 18 C27.6 10 20.6 6 14.6 6 C7.4 6 2 11.4 2 18 C2 24.6 7.4 30 14.6 30 C20.6 30 27.6 26 32 18 C36.4 10 43.4 6 49.4 6 C56.6 6 62 11.4 62 18 C62 24.6 56.6 30 49.4 30 C43.4 30 36.4 26 32 18 Z" fill="none" stroke="#E5C99A" stroke-width="2.6" stroke-linecap="round"/></svg><span class="online-dot"></span></div>
+      <div><strong>Start a conversation</strong><span>Continuum Aesthetics &middot; typically replies within minutes</span></div>
+    </div>
+    <div class="wa-panel-body">
+      <p>Questions about a treatment, financing or a good time to come in? Message us directly.</p>
+      <a class="wa-cta" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation%20at%20Continuum%20Aesthetics" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Chat on WhatsApp</a>
+      <a class="wa-sms" href="sms:+17867909217">Prefer SMS? Text us instead</a>
+    </div>
+  </div>
+  <button class="wa-toggle" id="waToggle" aria-expanded="false" aria-label="Chat with us on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    <span>Questions? Chat with us</span>
+  </button>
+</div>
+
+<!-- ===================================================== mobile sticky bar -->
+<nav class="sticky-bar" aria-label="Quick actions">
+  <a class="sticky-book" href="./book.html"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>Book</a>
+  <a class="sticky-wa" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="./main.js" defer></script>
+</body>
+</html>

@@ -9,6 +9,11 @@ These are Phase 1 placeholders per the imagery strategy in DESIGN-RESEARCH.md se
 Replace with the real Continuum shoot (Dr. Brunson, the Brickell suite, treatment b-roll)
 before production launch.
 
+Audit note (2026-06-12): two service-card images were off-theme (a houseplant standing
+in for "Hair" and a beach aerial for "Body & Wellness"). Both were replaced with on-theme,
+warm-palette medspa photos. The original filenames (botanical.jpg, miami-aerial.jpg) were
+kept so existing references resolve, even though the names no longer describe the content.
+
 | File | Used for | Source URL | Author | License |
 |---|---|---|---|---|
 | hero-suite.jpg | Home split-hero photo (right side) | https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80 | Unsplash contributor (ID photo-1618221195710-dd6b41faaea6) | Unsplash License (free commercial use) |
@@ -16,8 +21,8 @@ before production launch.
 | hero-poster.jpg | Poster frame for hero-loop.mp4 | https://images.pexels.com/videos/1093662/free-video-1093662.jpg?w=1280 | Same as hero-loop.mp4 | Pexels License |
 | texture-cream.jpg | Regenerative-skin row image, manifesto inline image | https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1600&q=80 | Unsplash contributor (ID photo-1528459801416-a9e53bbf4e17) | Unsplash License |
 | serum-gold.jpg | Face category card, injectables section image | https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=1600&q=80 | Unsplash contributor (ID photo-1576426863848-c21f53c60b19) | Unsplash License |
-| botanical.jpg | Hair category card and section image | https://images.unsplash.com/photo-1545241047-6083a3684587?w=1600&q=80 | Unsplash contributor (ID photo-1545241047-6083a3684587) | Unsplash License |
-| miami-aerial.jpg | Body & Wellness card, wellness section image | https://images.unsplash.com/photo-1501509497947-782640bc1412?w=1600&q=80 | Unsplash contributor (ID photo-1501509497947-782640bc1412) | Unsplash License |
+| botanical.jpg | Hair category card and section image (filename retained; now an on-theme hair-care photo, replaced 2026-06-12) | https://images.pexels.com/photos/3993465/pexels-photo-3993465.jpeg (https://www.pexels.com/photo/3993465/) | Pexels contributor (photo 3993465) | Pexels License (free commercial use) |
+| miami-aerial.jpg | Body & Wellness card, wellness section image (filename retained; now an on-theme wellness-suite photo, replaced 2026-06-12) | https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg (https://www.pexels.com/photo/3757942/) | Pexels contributor (photo 3757942) | Pexels License (free commercial use) |
 | brickell-dusk.jpg | Visit section, doctor-page CTA, contact page, og:image | https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=1600&q=80 | Unsplash contributor (ID photo-1535498730771-e735b998cd64) | Unsplash License |
 | palms-warm.jpg | Pre-footer CTA banner background | https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=1600&q=80 | Unsplash contributor (ID photo-1520454974749-611b7248ffdb) | Unsplash License |
 | palm-beach.jpg | Manifesto inline image, Your Needs CTA banner | https://images.unsplash.com/photo-1509233725247-49e657c54213?w=1600&q=80 | Unsplash contributor (ID photo-1509233725247-49e657c54213) | Unsplash License |

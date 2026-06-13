@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>Continuum Aesthetics: Three Concepts</title>
+<title>Continuum Aesthetics: Four Concepts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Archivo:wght@300;400;600&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Montserrat:wght@300;500;700&family=Marcellus&family=Cormorant:ital,wght@1,400;1,500&family=Figtree:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Archivo:wght@300;400;600&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Montserrat:wght@300;500;700&family=Marcellus&family=Cormorant:ital,wght@1,400;1,500&family=Figtree:wght@300;400;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --page-bg:#0B0E10;
@@ -53,8 +53,8 @@
 
   /* ---------- Cards grid ---------- */
   .grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
-    padding-bottom:24px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:26px;
+    max-width:920px;margin:0 auto;padding-bottom:24px;
   }
   .card{
     display:block;text-decoration:none;color:inherit;
@@ -148,6 +148,28 @@
   .solana .meta-border{border-top:1px solid #D8D2C4}
   .solana .name-font{font-family:'Marcellus',serif}
 
+  /* Lumen: luminous noir couture */
+  .lumen .preview{
+    background:#0B0B0D;
+    background-image:radial-gradient(460px 280px at 78% 8%, rgba(201,160,90,0.16), transparent 66%);
+    color:#F4EFE6;position:relative;overflow:hidden;
+  }
+  .lumen .preview::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:linear-gradient(90deg, transparent, rgba(224,190,124,0.55), transparent);
+  }
+  .lumen .p-eyebrow{color:#C9A05A;letter-spacing:0.26em}
+  .lumen .p-head{font-family:'Bodoni Moda',serif;font-weight:400;font-size:33px;color:#E0BE7C}
+  .lumen .p-head .it{font-style:italic;color:#E8D9C0}
+  .lumen .p-sub{color:rgba(244,239,230,0.7);font-family:'Jost',sans-serif;font-weight:300}
+  .lumen .p-btn{
+    background:transparent;color:#E0BE7C;border-radius:999px;
+    border:1px solid #C9A05A;font-family:'Jost',sans-serif;font-weight:500;
+    transition:background .35s ease, color .35s ease;
+  }
+  .lumen:hover .p-btn{background:#C9A05A;color:#0B0B0D}
+  .lumen .name-font{font-family:'Bodoni Moda',serif}
+
   /* ---------- Footer note ---------- */
   .note{
     margin:56px auto 0;max-width:680px;text-align:center;
@@ -192,8 +214,8 @@
 
   <header class="reveal">
     <div class="eyebrow">Continuum Aesthetics &middot; Brickell, Miami</div>
-    <h1>Three concepts.<br><span class="it">One</span> practice.</h1>
-    <p class="sub">Dr. Brunson, here are three complete directions for the Continuum Aesthetics website. Each one is built on the same content, booking flow, and strategy. They differ in feel. <strong>Explore all three, then pick the one that feels like your practice.</strong></p>
+    <h1>Four concepts.<br><span class="it">One</span> practice.</h1>
+    <p class="sub">Dr. Brunson, here are four complete directions for the Continuum Aesthetics website. Each one is built on the same content, booking flow, and strategy. They differ in feel. <strong>Explore all four, then pick the one that feels like your practice.</strong></p>
     <div class="rule"></div>
   </header>
 
@@ -276,13 +298,36 @@
       </div>
     </a>
 
+    <!-- Concept 4: Lumen -->
+    <a class="card lumen reveal" href="./lumen/" style="transition-delay:.38s">
+      <div class="preview">
+        <div class="p-eyebrow">Physician-Led Aesthetic Medicine</div>
+        <div class="p-head">Aesthetic medicine, <span class="it">elevated</span></div>
+        <p class="p-sub">Luminous noir, couture motion. Gold on near-black.</p>
+        <span class="p-btn">Book a Consultation</span>
+      </div>
+      <div class="meta">
+        <div class="c-name name-font">Lumen <span class="c-num">04</span></div>
+        <p class="c-pos">Luminous noir, couture motion. The most animation-forward and fashion-editorial of the four, gold on near-black with cinematic interactions.</p>
+        <div class="swatches">
+          <span class="sw" style="background:#0B0B0D" title="Near-black ink"></span>
+          <span class="sw" style="background:#F4EFE6" title="Ivory"></span>
+          <span class="sw" style="background:#C9A05A" title="Gold"></span>
+          <span class="sw" style="background:#E8D9C0" title="Champagne"></span>
+          <span class="sw" style="background:#8E714F" title="Bronze"></span>
+        </div>
+        <div class="c-fonts">Type: <em>Bodoni Moda</em> + <em>Jost</em></div>
+        <div class="c-view">View Concept <span class="arr">&rarr;</span></div>
+      </div>
+    </a>
+
   </main>
 
-  <div class="note reveal" style="transition-delay:.38s">
-    <p><span class="dot"></span><strong>Every concept is a fully working site, not a mockup.</strong> Click through the pages, try them on your phone, and press the booking buttons. Booking is live on all three.</p>
+  <div class="note reveal" style="transition-delay:.48s">
+    <p><span class="dot"></span><strong>Every concept is a fully working site, not a mockup.</strong> Click through the pages, try them on your phone, and press the booking buttons. Booking is live on all four.</p>
   </div>
 
-  <footer class="reveal" style="transition-delay:.44s">
+  <footer class="reveal" style="transition-delay:.54s">
     <p>Continuum Aesthetics &middot; Prepared for Dr. Adam Brunson</p>
   </footer>
 
