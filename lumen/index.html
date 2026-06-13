@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Continuum Aesthetics | Physician-Led Medspa in Brickell, Miami</title>
+<meta name="description" content="Physician-led aesthetic and wellness medicine in Brickell, Miami. Botox, fillers, biostimulators, PRF, peptides, GLP-1 and BHRT by Dr. Adam Brunson, MD. 5.0 on Google.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Continuum Aesthetics | Physician-Led Medspa in Brickell, Miami">
+<meta property="og:description" content="Elevate your every chapter. Aesthetic and wellness medicine led by Dr. Adam Brunson, MD. Brickell, Miami.">
+<meta property="og:image" content="../current/assets/og.jpg">
+<meta name="theme-color" content="#0B0B0D">
+<link rel="icon" type="image/svg+xml" href="../current/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Continuum Aesthetics",
+  "description": "Physician-led medspa in Brickell, Miami offering injectables, regenerative skin treatments, peptides, GLP-1 weight management, BHRT and hair restoration.",
+  "telephone": "+1-786-790-9217",
+  "email": "info@continuumaesthetics.com",
+  "address": { "@type": "PostalAddress", "streetAddress": "175 SW 7th Street, Suite 1411", "addressLocality": "Miami", "addressRegion": "FL", "postalCode": "33130", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 25.7674432, "longitude": -80.196822 },
+  "sameAs": [ "https://www.instagram.com/continuumaesthetics", "https://maps.google.com/?cid=13139619741760947504" ],
+  "founder": { "@type": "Physician", "name": "Adam Brunson, MD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "30" }
+}
+</script>
+<style>
+/* ============================================================ tokens */
+:root{
+  --ink:#0B0B0D;
+  --ink-soft:#15151A;
+  --ivory:#F4EFE6;
+  --ivory-2:#EBE3D5;
+  --text-dark:#1A1714;
+  --muted:#8A8378;
+  --line-light:rgba(26,23,20,.14);
+  --line-dark:rgba(244,239,230,.16);
+  --gold:#C9A05A;
+  --gold-bright:#E0BE7C;
+  --champagne:#E8D9C0;
+  --bronze:#8E714F;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --container:1280px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  font-family:'Jost',sans-serif;background:var(--ink);color:var(--ivory);
+  font-weight:300;line-height:1.7;font-size:17px;overflow-x:hidden;
+}
+body.loading{overflow:hidden;height:100vh}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+::selection{background:var(--gold);color:var(--ink)}
+
+/* ============================================================ type */
+.display{font-family:'Bodoni Moda',serif;font-weight:400;line-height:.98;letter-spacing:-.01em}
+.display .it{font-style:italic;font-weight:400}
+h1.display{font-size:clamp(3.2rem,11vw,10rem)}
+h2.display{font-size:clamp(2.4rem,6.4vw,5.4rem)}
+h3.display{font-size:clamp(1.6rem,3vw,2.4rem)}
+.kicker{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.lede{font-size:clamp(1.05rem,1.7vw,1.3rem);font-weight:300;line-height:1.6}
+.eyebrow-rule{display:inline-flex;align-items:center;gap:14px}
+.eyebrow-rule::before{content:"";width:42px;height:1px;background:var(--gold);opacity:.7}
+
+/* ============================================================ grain + cursor */
+.grain{position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;z-index:10000;pointer-events:none;border-radius:50%;
+  transform:translate(-50%,-50%);mix-blend-mode:difference;will-change:transform}
+.cursor-dot{width:7px;height:7px;background:#fff}
+.cursor-ring{width:40px;height:40px;border:1px solid rgba(255,255,255,.6);transition:width .3s var(--ease),height .3s var(--ease),background .3s,border-color .3s}
+.cursor-ring.hov{width:64px;height:64px;background:rgba(255,255,255,.08);border-color:transparent}
+@media (pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
+
+/* ============================================================ preloader */
+.preloader{position:fixed;inset:0;z-index:9999;background:var(--ink);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:30px}
+.pre-mark{width:120px;height:auto;color:var(--gold)}
+.pre-mark path{stroke-dasharray:1;stroke-dashoffset:1;pathLength:1}
+.pre-count{font-family:'Bodoni Moda',serif;font-size:14px;letter-spacing:.3em;color:var(--champagne);opacity:.7}
+.pre-curtain{position:fixed;inset:0;z-index:9998;background:var(--ink);transform-origin:top;pointer-events:none}
+
+/* ============================================================ header */
+.announce{position:fixed;top:0;left:0;width:100%;z-index:120;background:transparent;
+  text-align:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);
+  padding:9px 0;opacity:0;transition:opacity .5s}
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:100;padding:26px 0;
+  transition:padding .4s var(--ease),background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+.site-header.scrolled{padding:14px 0;background:rgba(11,11,13,.72);backdrop-filter:blur(14px);border-bottom-color:var(--line-dark)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo-link{display:block;width:200px;color:var(--ivory)}
+.logo-link svg{width:100%;height:auto}
+.main-nav{display:flex;align-items:center;gap:34px}
+.main-nav a{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:var(--ivory);opacity:.82;position:relative;padding:4px 0}
+.main-nav a:not(.header-book)::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .4s var(--ease)}
+.main-nav a:not(.header-book):hover::after{width:100%}
+.main-nav a:hover{opacity:1}
+.header-book{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--gold);color:var(--gold)!important;
+  padding:11px 22px;border-radius:999px;opacity:1!important;transition:background .4s,color .4s}
+.header-book:hover{background:var(--gold);color:var(--ink)!important}
+.header-book .arrow{transition:transform .35s var(--ease)}
+.header-book:hover .arrow{transform:translateX(4px)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:101}
+.nav-toggle span{width:26px;height:1.5px;background:var(--ivory);transition:.3s}
+.nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ============================================================ buttons */
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--gold);color:var(--ink);
+  font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:17px 32px;border-radius:999px;
+  transition:transform .4s var(--ease),box-shadow .4s,background .4s;will-change:transform}
+.btn:hover{background:var(--gold-bright);box-shadow:0 18px 50px rgba(201,160,90,.32)}
+.btn .arrow,.btn-ghost .arrow{transition:transform .35s var(--ease)}
+.btn:hover .arrow{transform:translateX(5px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:11px;border:1px solid var(--line-dark);color:var(--ivory);
+  font-weight:400;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:16px 30px;border-radius:999px;transition:border-color .4s,color .4s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-ghost:hover .arrow{transform:translateX(5px)}
+.magnetic{display:inline-block}
+
+/* ============================================================ hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+.hero-fallback{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(120% 90% at 70% 20%,rgba(201,160,90,.42),transparent 55%),
+  radial-gradient(90% 80% at 20% 90%,rgba(142,113,79,.4),transparent 60%),var(--ink)}
+.hero-vignette{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(120% 120% at 50% 30%,transparent 40%,rgba(11,11,13,.55) 100%);
+  box-shadow:inset 0 -120px 160px -40px var(--ink),inset 0 80px 120px -60px rgba(11,11,13,.7)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:var(--container);margin:0 auto;
+  padding:0 clamp(20px,5vw,64px) clamp(54px,8vh,104px)}
+.hero .kicker{display:block;overflow:hidden}
+.hero .kicker span{display:inline-block}
+.hero h1{margin:22px 0 0;text-transform:none}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .line .word{display:inline-block;will-change:transform}
+.hero h1 .l2{color:var(--champagne)}
+.hero-sub{max-width:46ch;margin-top:28px;color:rgba(244,239,230,.82);font-size:clamp(1rem,1.5vw,1.18rem)}
+.hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:36px}
+.hero-stars{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.04em;color:var(--ivory)}
+.hero-stars .stars{color:var(--gold);letter-spacing:2px}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(244,239,230,.6);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-cue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============================================================ marquee */
+.marquee{padding:34px 0;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);overflow:hidden;background:var(--ink)}
+.marquee-track{display:flex;gap:0;white-space:nowrap;will-change:transform}
+.marquee-track span{font-family:'Bodoni Moda',serif;font-size:clamp(1.6rem,3.4vw,3rem);font-style:italic;
+  color:transparent;-webkit-text-stroke:1px rgba(232,217,192,.5);padding:0 .5em;display:inline-flex;align-items:center;gap:.6em}
+.marquee-track span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);-webkit-text-stroke:0}
+
+/* ============================================================ sections */
+.section{padding:clamp(80px,13vh,170px) 0;position:relative}
+.light{background:var(--ivory);color:var(--text-dark)}
+.light .kicker{color:var(--bronze)}
+.light .eyebrow-rule::before{background:var(--bronze)}
+.light .btn-ghost{border-color:var(--line-light);color:var(--text-dark)}
+.light .btn-ghost:hover{border-color:var(--bronze);color:var(--bronze)}
+.section-head{max-width:760px;margin-bottom:clamp(44px,6vw,76px)}
+.section-head .kicker{display:block;margin-bottom:20px}
+.section-head h2{margin-top:6px}
+
+/* manifesto */
+.manifesto{font-family:'Bodoni Moda',serif;font-size:clamp(1.7rem,4.2vw,3.4rem);line-height:1.22;font-weight:400;max-width:20ch}
+.manifesto .reveal-word{display:inline-block;opacity:.16;transition:opacity .5s var(--ease)}
+.manifesto .it{font-style:italic;color:var(--gold)}
+
+/* doctor */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px);align-items:center}
+.media-card{position:relative;overflow:hidden;border-radius:4px;background:var(--ink-soft)}
+.media-card img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.2s var(--ease)}
+.media-card:hover img{transform:scale(1.12)}
+.media-clip{clip-path:inset(0 0 100% 0)}
+.media-caption{position:absolute;left:0;bottom:0;width:100%;padding:18px 22px;font-size:12px;letter-spacing:.04em;
+  color:var(--champagne);background:linear-gradient(transparent,rgba(11,11,13,.85))}
+.cred-list{list-style:none;margin-top:30px;display:grid;gap:15px}
+.cred-list li{display:flex;gap:13px;align-items:flex-start;font-size:15.5px;line-height:1.5}
+.cred-list svg{flex-shrink:0;color:var(--gold);margin-top:3px}
+.cred-list strong{font-weight:500}
+.act-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+
+/* method sticky stack */
+.method-wrap{position:relative}
+.method-card{position:sticky;top:16vh;background:var(--ink-soft);border:1px solid var(--line-dark);border-radius:6px;
+  padding:clamp(34px,5vw,64px);margin-bottom:26px;display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,56px);
+  align-items:start;box-shadow:0 -10px 60px rgba(0,0,0,.4)}
+.method-card .step-num{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(3rem,7vw,6rem);color:var(--gold);line-height:.8}
+.method-card h3{font-family:'Bodoni Moda',serif;font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:400;margin-bottom:14px}
+.method-card p{max-width:52ch;color:rgba(244,239,230,.78)}
+
+/* horizontal treatments */
+.h-section{background:var(--ivory);color:var(--text-dark);overflow:hidden}
+.h-intro{padding:clamp(70px,10vh,120px) 0 0}
+.h-track{display:flex;gap:28px;padding:56px clamp(20px,5vw,64px) clamp(70px,10vh,120px);width:max-content}
+.t-card{position:relative;width:min(78vw,440px);flex-shrink:0;border-radius:6px;overflow:hidden;background:#e3dac9;aspect-ratio:3/4}
+.t-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.t-card:hover img{transform:scale(1.07)}
+.t-card .t-overlay{position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(11,11,13,.86));padding:30px;display:flex;flex-direction:column;justify-content:flex-end;color:var(--ivory)}
+.t-num{position:absolute;top:24px;left:26px;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.3rem;color:var(--champagne)}
+.t-card h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:1.9rem;margin-bottom:10px}
+.t-card .t-list{font-size:13.5px;letter-spacing:.02em;color:rgba(244,239,230,.82);line-height:1.6}
+.t-go{margin-top:18px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:8px;align-items:center}
+.h-progress{height:1px;background:var(--line-light);margin:0 clamp(20px,5vw,64px) 50px;position:relative}
+.h-progress i{position:absolute;left:0;top:-0.5px;height:2px;background:var(--bronze);width:8%}
+
+/* stats */
+.stats{background:var(--ink)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.stat-num{font-family:'Bodoni Moda',serif;font-size:clamp(2.8rem,6vw,5rem);color:var(--gold);line-height:1}
+.stat-label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+
+/* reviews */
+.reviews-head{display:flex;align-items:center;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+.reviews-score{font-family:'Bodoni Moda',serif;font-size:clamp(4rem,9vw,7rem);color:var(--gold);line-height:.8}
+.review-track{display:flex;gap:24px;overflow-x:auto;padding-bottom:18px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
+.review-track::-webkit-scrollbar{display:none}
+.review-card{flex:0 0 min(86vw,420px);scroll-snap-align:start;border:1px solid var(--line-light);border-radius:6px;padding:34px;background:#fff}
+.light .review-card blockquote{font-family:'Bodoni Moda',serif;font-size:1.45rem;font-weight:400;line-height:1.3;color:var(--text-dark)}
+.review-card .rstars{color:var(--gold);letter-spacing:2px;font-size:13px}
+.review-attrib{margin-top:20px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center}
+.text-link{display:inline-flex;align-items:center;gap:9px;color:var(--bronze);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.text-link .arrow{transition:transform .35s var(--ease)}
+.text-link:hover .arrow{transform:translateX(5px)}
+
+/* cherry */
+.cherry-points{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:18px}
+.cherry-point{border-top:1px solid var(--line-dark);padding-top:22px}
+.cherry-big{font-family:'Bodoni Moda',serif;font-size:clamp(1.8rem,3.6vw,2.8rem);color:var(--gold);display:block;margin-bottom:12px}
+.cherry-point p{color:rgba(244,239,230,.74);font-size:15px}
+
+/* visit */
+.visit-list{list-style:none;display:grid;gap:16px;margin-top:26px}
+.visit-list li{display:flex;gap:13px;align-items:flex-start;font-size:15.5px}
+.visit-list svg{flex-shrink:0;color:var(--bronze);margin-top:3px}
+
+/* prefooter */
+.prefooter{background:var(--ink);text-align:center}
+.prefooter h2{margin:18px 0 34px}
+.prefooter-actions{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.prefooter-note{margin-top:26px;font-size:14px;color:var(--muted)}
+.prefooter-note a{color:var(--gold)}
+
+/* footer */
+.site-footer{background:#070708;padding:clamp(60px,8vw,100px) 0 40px;border-top:1px solid var(--line-dark)}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.footer-brand svg{width:210px;height:auto;color:var(--ivory);margin-bottom:18px}
+.footer-brand p{color:var(--muted);max-width:38ch;font-size:14.5px}
+.footer-col h4{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:500}
+.footer-col ul{list-style:none;display:grid;gap:11px}
+.footer-col a,.footer-col address{font-size:14.5px;color:rgba(244,239,230,.72);font-style:normal;line-height:1.7;transition:color .3s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{margin-top:54px;padding-top:26px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+
+/* whatsapp float */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:300;display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.wa-toggle{display:inline-flex;align-items:center;gap:11px;background:#1FA855;color:#fff;border:0;cursor:pointer;
+  padding:13px 20px 13px 15px;border-radius:999px;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;
+  box-shadow:0 14px 40px rgba(31,168,85,.4);transition:transform .3s var(--ease)}
+.wa-toggle:hover{transform:translateY(-3px)}
+.wa-panel{width:312px;max-width:calc(100vw - 48px);background:var(--ink-soft);border:1px solid var(--line-dark);border-radius:16px;
+  overflow:hidden;opacity:0;transform:translateY(12px) scale(.96);transform-origin:bottom right;pointer-events:none;transition:.3s var(--ease)}
+.wa-float.open .wa-panel{opacity:1;transform:none;pointer-events:auto}
+.wa-panel-head{display:flex;gap:13px;align-items:center;padding:18px;background:#0f3d24}
+.wa-avatar{position:relative;width:46px;height:34px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.online-dot{position:absolute;right:-2px;bottom:-2px;width:11px;height:11px;border-radius:50%;background:#37e07e;border:2px solid #0f3d24}
+.wa-panel-head strong{display:block;font-size:14px;color:#fff;font-weight:500}
+.wa-panel-head span{display:block;font-size:11.5px;color:rgba(255,255,255,.7);line-height:1.4;margin-top:2px}
+.wa-panel-body{padding:18px}
+.wa-panel-body p{font-size:14px;color:rgba(244,239,230,.82);margin-bottom:16px}
+.wa-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:#1FA855;color:#fff;padding:13px;border-radius:10px;font-weight:500;font-size:14px}
+.wa-sms{display:block;text-align:center;margin-top:12px;font-size:13px;color:var(--gold)}
+
+/* mobile sticky bar */
+.sticky-bar{display:none}
+
+/* ============================================================ reveal */
+[data-reveal]{opacity:0;transform:translateY(28px)}
+.no-anim [data-reveal]{opacity:1;transform:none}
+
+/* ============================================================ responsive */
+@media (max-width:900px){
+  .grid-2{grid-template-columns:1fr;gap:38px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .cherry-points{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:40px 20px}
+  .method-card{grid-template-columns:1fr;gap:14px;top:11vh}
+}
+@media (max-width:760px){
+  .main-nav{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;gap:30px;
+    transform:translateX(100%);transition:transform .5s var(--ease);z-index:99}
+  .main-nav.open{transform:none}
+  .main-nav a{font-size:18px}
+  .nav-toggle{display:flex}
+  .logo-link{width:160px}
+  .footer-grid{grid-template-columns:1fr}
+  .reviews-head{gap:18px}
+  .wa-toggle span{display:none}
+  .wa-toggle{padding:15px}
+  body{padding-bottom:64px}
+  .sticky-bar{display:flex;position:fixed;bottom:0;left:0;width:100%;z-index:250;border-top:1px solid var(--line-dark)}
+  .sticky-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;padding:17px;font-size:14px;font-weight:500;letter-spacing:.04em}
+  .sticky-book{background:var(--gold);color:var(--ink)}
+  .sticky-wa{background:#1FA855;color:#fff}
+  .wa-float{bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body class="loading">
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<!-- ===================================================== preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="pre-mark" viewBox="0 0 64 36" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 18 C27.6 10 20.6 6 14.6 6 C7.4 6 2 11.4 2 18 C2 24.6 7.4 30 14.6 30 C20.6 30 27.6 26 32 18 C36.4 10 43.4 6 49.4 6 C56.6 6 62 11.4 62 18 C62 24.6 56.6 30 49.4 30 C43.4 30 36.4 26 32 18 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <div class="pre-count"><span id="preNum">0</span> — CONTINUUM</div>
+</div>
+<div class="pre-curtain" id="preCurtain" aria-hidden="true"></div>
+
+<!-- ===================================================== announce + header -->
+<div class="announce" id="announce">Complimentary valet &middot; Brickell, Miami &middot; Financing by Cherry</div>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a class="logo-link" href="#top" aria-label="Continuum Aesthetics home" data-cursor>
+      <svg viewBox="0 0 332 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Continuum Aesthetics">
+        <path d="M30 32 C25.6 24 18.6 20 12.6 20 C5.4 20 0 25.4 0 32 C0 38.6 5.4 44 12.6 44 C18.6 44 25.6 40 30 32 C34.4 24 41.4 20 47.4 20 C54.6 20 60 25.4 60 32 C60 38.6 54.6 44 47.4 44 C41.4 44 34.4 40 30 32 Z" transform="translate(2 0)" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <text x="76" y="37" font-family="Jost, sans-serif" font-size="23" font-weight="500" letter-spacing="5.5" fill="currentColor">CONTINUUM</text>
+        <text x="77" y="56" font-family="Jost, sans-serif" font-size="10.5" font-weight="400" letter-spacing="7.2" opacity="0.78" fill="currentColor">AESTHETICS</text>
+      </svg>
+    </a>
+    <nav class="main-nav" id="nav" aria-label="Primary">
+      <a href="#treatments" data-cursor>Treatments</a>
+      <a href="#method" data-cursor>The Method</a>
+      <a href="#doctor" data-cursor>Dr. Brunson</a>
+      <a href="#financing" data-cursor>Financing</a>
+      <a href="#visit" data-cursor>Visit</a>
+      <a class="header-book magnetic" href="#book" data-cursor>Book<span class="arrow" aria-hidden="true">&#8594;</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================================================== hero -->
+  <section class="hero">
+    <canvas id="gl"></canvas>
+    <div class="hero-fallback" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="kicker" id="heroKicker"><span>Physician-Led Aesthetic Medicine &middot; Brickell</span></p>
+      <h1 class="display">
+        <span class="line l1"><span class="word">Elevate</span> <span class="word">Your</span></span>
+        <span class="line l2"><span class="word it">Every</span> <span class="word it">Chapter</span></span>
+      </h1>
+      <p class="hero-sub" data-hero-fade>Aesthetic and wellness medicine led by Dr. Adam Brunson, MD. Subtle, natural results, planned in a physician consultation and performed with emergency-room precision.</p>
+      <div class="hero-row" data-hero-fade>
+        <a class="btn magnetic" href="#book" data-cursor>Book a Consultation<span class="arrow" aria-hidden="true">&#8594;</span></a>
+        <a class="hero-stars" href="https://maps.google.com/?cid=13139619741760947504" target="_blank" rel="noopener" data-cursor>
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>5.0 from 30 Google reviews</span>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ===================================================== marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <span>Botox</span><span>Fillers</span><span>Sculptra</span><span>Radiesse</span><span>PRF</span><span>Exosomes</span><span>Microneedling</span><span>Peptides</span><span>GLP-1</span><span>BHRT</span><span>Hair Restoration</span>
+      <span>Botox</span><span>Fillers</span><span>Sculptra</span><span>Radiesse</span><span>PRF</span><span>Exosomes</span><span>Microneedling</span><span>Peptides</span><span>GLP-1</span><span>BHRT</span><span>Hair Restoration</span>
+    </div>
+  </div>
+
+  <!-- ===================================================== manifesto -->
+  <section class="section">
+    <div class="container">
+      <p class="manifesto" id="manifesto">A practice where the <span class="it">doctor</span> is the one who treats you, and the result is <span class="it">unmistakably</span> still you.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================== doctor -->
+  <section class="section light" id="doctor">
+    <div class="container grid-2">
+      <div class="media-card media-clip" data-reveal data-clip style="aspect-ratio:4/5">
+        <img src="../current/assets/vials-gloves.jpg" alt="Gloved hands preparing a treatment in a clinical setting" loading="lazy">
+        <p class="media-caption">A "Meet Dr. Brunson" film and clinic photography arrive with the launch shoot.</p>
+      </div>
+      <div>
+        <p class="kicker eyebrow-rule" data-reveal>Meet your physician</p>
+        <h2 class="display" data-reveal style="margin-top:18px">Precision is a<br><span class="it">medical</span> habit</h2>
+        <p data-reveal style="margin-top:22px;max-width:50ch;color:#4a4338">Dr. Adam Brunson is a board-certified emergency physician who trained at Jackson Memorial Hospital, one of the busiest trauma centers in the country. He brings that anatomical precision and calm to aesthetic medicine. Every plan begins with a consultation. Nothing is rushed, and nothing is sold that you do not need.</p>
+        <ul class="cred-list" style="color:#2a241d">
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Board certified,</strong> American Board of Emergency Medicine</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Residency,</strong> Jackson Memorial Hospital / University of Miami</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Consultations</strong> in English, Spanish and Portuguese</span></li>
+        </ul>
+        <div class="act-row">
+          <a class="btn magnetic" href="#book" data-cursor>Book a Consultation<span class="arrow" aria-hidden="true">&#8594;</span></a>
+          <a class="btn-ghost" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener" data-cursor>Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== method (sticky stack) -->
+  <section class="section" id="method">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="kicker eyebrow-rule">The Continuum Method</span>
+        <h2 class="display" style="margin-top:18px">One protocol,<br><span class="it">every</span> treatment</h2>
+      </div>
+      <div class="method-wrap">
+        <article class="method-card"><span class="step-num">I</span><div><h3>Assess</h3><p>A physician consultation first. Anatomy, goals, history and, where relevant, labs. We map the face before we touch it.</p></div></article>
+        <article class="method-card"><span class="step-num">II</span><div><h3>Plan</h3><p>A personalized plan you understand. You will know what is being done and why before anything happens, with conservative dosing by default.</p></div></article>
+        <article class="method-card"><span class="step-num">III</span><div><h3>Treat</h3><p>Performed methodically, under physician supervision. The same precision a trauma-trained doctor brings to the emergency room, brought to your face.</p></div></article>
+        <article class="method-card"><span class="step-num">IV</span><div><h3>Maintain</h3><p>Follow-up and direct access for questions. Results are managed across chapters, not single visits. You are never left guessing.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== treatments (horizontal pin) -->
+  <section class="h-section" id="treatments">
+    <div class="h-intro">
+      <div class="container section-head" data-reveal style="margin-bottom:0">
+        <span class="kicker eyebrow-rule">The Menu</span>
+        <h2 class="display" style="margin-top:18px">Treatments, by <span class="it">territory</span></h2>
+      </div>
+    </div>
+    <div class="h-progress" aria-hidden="true"><i id="hProgress"></i></div>
+    <div class="h-track" id="hTrack">
+      <a class="t-card" href="#book" data-cursor>
+        <img src="../current/assets/inject-hands.jpg" alt="Cosmetic injectable treatment being prepared">
+        <span class="t-num">01</span>
+        <span class="t-overlay"><h3>Face &amp; Contour</h3><span class="t-list">Botulinum toxin &middot; HA fillers &middot; Sculptra &middot; Radiesse</span><span class="t-go">Explore <span class="arrow">&#8594;</span></span></span>
+      </a>
+      <a class="t-card" href="#book" data-cursor>
+        <img src="../current/assets/cream-texture.jpg" alt="Smooth cream texture in soft neutral light">
+        <span class="t-num">02</span>
+        <span class="t-overlay"><h3>Skin &amp; Regenerative</h3><span class="t-list">PRF &middot; Exosomes &middot; Microneedling</span><span class="t-go">Explore <span class="arrow">&#8594;</span></span></span>
+      </a>
+      <a class="t-card" href="#book" data-cursor>
+        <img src="../current/assets/cat-wellness.jpg" alt="Clinical wellness treatment detail">
+        <span class="t-num">03</span>
+        <span class="t-overlay"><h3>Wellness &amp; Longevity</h3><span class="t-list">Peptides &middot; GLP-1 weight loss &middot; BHRT</span><span class="t-go">Explore <span class="arrow">&#8594;</span></span></span>
+      </a>
+      <a class="t-card" href="#book" data-cursor>
+        <img src="../current/assets/cat-hair.jpg" alt="Healthy hair in soft natural light">
+        <span class="t-num">04</span>
+        <span class="t-overlay"><h3>Hair Restoration</h3><span class="t-list">PRF for thinning hair, temples and crown</span><span class="t-go">Explore <span class="arrow">&#8594;</span></span></span>
+      </a>
+      <a class="t-card" href="#book" data-cursor>
+        <img src="../meridian/assets/botanical-vase.jpg" alt="Botanical detail in soft light" onerror="this.src='../current/assets/marble-cream.jpg'">
+        <span class="t-num">05</span>
+        <span class="t-overlay"><h3>Consultation</h3><span class="t-list">A $0 physician consultation. The first step in every plan.</span><span class="t-go">Book free <span class="arrow">&#8594;</span></span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================================================== stats -->
+  <section class="section stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div data-reveal><div class="stat-num"><span data-count="5.0" data-dec="1">0.0</span></div><div class="stat-label">Google rating</div></div>
+        <div data-reveal><div class="stat-num"><span data-count="30">0</span></div><div class="stat-label">Five-star reviews</div></div>
+        <div data-reveal><div class="stat-num"><span data-count="11">0</span></div><div class="stat-label">Physician-led treatments</div></div>
+        <div data-reveal><div class="stat-num"><span data-count="2020">0</span></div><div class="stat-label">Caring for Miami since</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== reviews -->
+  <section class="section light" aria-label="Patient reviews">
+    <div class="container">
+      <div class="reviews-head" data-reveal>
+        <div class="reviews-score">5.0</div>
+        <div>
+          <span class="kicker eyebrow-rule">What patients say</span>
+          <p style="font-family:'Bodoni Moda',serif;font-size:1.4rem;margin-top:10px;color:var(--text-dark)">Thirty reviews. Every one of them five stars.</p>
+          <a class="text-link" href="https://maps.google.com/?cid=13139619741760947504" target="_blank" rel="noopener" data-cursor>Read them on Google <span class="arrow">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="review-track" tabindex="0">
+        <article class="review-card"><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>"People can't tell what I've had done, just that I look great."</blockquote><p class="review-attrib">William H. &middot; Google</p></article>
+        <article class="review-card"><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>"The results are always subtle, balanced and natural. I trust him completely."</blockquote><p class="review-attrib">Yossi B. &middot; Google</p></article>
+        <article class="review-card"><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>"He mapped out where he was going to inject and did it precisely and methodically."</blockquote><p class="review-attrib">Daniel D. &middot; Google</p></article>
+        <article class="review-card"><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>"Being treated by a doctor gives me an extra level of confidence. He's the go-to in Miami."</blockquote><p class="review-attrib">Kyle H. &middot; Google</p></article>
+        <article class="review-card"><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>"He treats every patient like a work of art."</blockquote><p class="review-attrib">Jimmy S. &middot; Google</p></article>
+        <article class="review-card"><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><blockquote>"I've been seeing Dr. Brunson since 2020 and I don't trust anyone else with my face."</blockquote><p class="review-attrib">Andrew S. &middot; Google</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== cherry -->
+  <section class="section" id="financing">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="kicker eyebrow-rule">Financing</span>
+        <h2 class="display" style="margin-top:18px">Pay over time<br>with <span class="it">Cherry</span></h2>
+        <p class="lede" style="margin-top:18px;max-width:56ch;color:rgba(244,239,230,.78)">Treatment plans should fit your life, not the other way around. Cherry lets qualified patients split costs into comfortable monthly payments.</p>
+      </div>
+      <div class="cherry-points">
+        <div class="cherry-point" data-reveal><span class="cherry-big">0% APR</span><p>Options available for qualifying patients, so paying over time does not mean paying more.</p></div>
+        <div class="cherry-point" data-reveal><span class="cherry-big">Up to $50,000</span><p>Approval amounts covering everything from a single visit to a long-term plan.</p></div>
+        <div class="cherry-point" data-reveal><span class="cherry-big">No hard credit check</span><p>Checking eligibility takes seconds and does not affect your credit score.</p></div>
+      </div>
+      <div class="act-row" data-reveal>
+        <a class="btn magnetic" href="https://pay.withcherry.com/continuum-aesthetics" target="_blank" rel="noopener" data-cursor>Apply with Cherry<span class="arrow" aria-hidden="true">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== visit / book -->
+  <section class="section light" id="visit">
+    <div class="container grid-2">
+      <div>
+        <span class="kicker eyebrow-rule" data-reveal>Visit &amp; Book</span>
+        <h2 class="display" data-reveal style="margin-top:18px">A private suite<br>in <span class="it">Brickell</span></h2>
+        <ul class="visit-list" style="color:#2a241d">
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg><span><strong>175 SW 7th Street, Suite 1411,</strong> Miami, FL 33130</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14M7 17l1.2-7.2A2 2 0 0 1 10.2 8h3.6a2 2 0 0 1 2 1.8L17 17"/></svg><span><strong>Complimentary valet</strong> when you arrive</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span><strong>By appointment only.</strong> Open today 9:00am to 6:00pm</span></li>
+          <li data-reveal><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg><span><strong>Text, WhatsApp or call:</strong> <a href="tel:+17867909217" style="color:var(--bronze)">786.790.9217</a></span></li>
+        </ul>
+      </div>
+      <div id="book">
+        <div style="border:1px solid var(--line-light);border-radius:8px;padding:clamp(26px,4vw,42px);background:#fff" data-reveal>
+          <span class="kicker" style="color:var(--bronze)">Book online</span>
+          <h3 class="display" style="margin:12px 0 6px;color:var(--text-dark)">Begin with a <span class="it">consultation</span></h3>
+          <p style="color:#5a5044;margin-bottom:22px">Your first step is a $0 physician consultation with Dr. Brunson. Reserve a time or message us directly and we will find one for you.</p>
+          <div class="act-row" style="margin-top:0">
+            <a class="btn magnetic" href="https://na02.patientnow.com/a/DRBRUNSON" target="_blank" rel="noopener" data-cursor>Reserve a Time<span class="arrow" aria-hidden="true">&#8594;</span></a>
+            <a class="btn-ghost" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation%20at%20Continuum%20Aesthetics" target="_blank" rel="noopener" data-cursor>WhatsApp us</a>
+          </div>
+          <p style="font-size:12.5px;color:var(--muted);margin-top:18px">Booking handled securely through PatientNow. Individual results may vary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== prefooter -->
+  <section class="section prefooter">
+    <div class="container">
+      <span class="kicker" data-reveal>Ready when you are</span>
+      <h2 class="display" data-reveal>Your next chapter starts<br>with a <span class="it">conversation</span></h2>
+      <div class="prefooter-actions" data-reveal>
+        <a class="btn magnetic" href="#book" data-cursor>Book a Consultation<span class="arrow" aria-hidden="true">&#8594;</span></a>
+        <a class="btn-ghost" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener" data-cursor>Chat on WhatsApp</a>
+      </div>
+      <p class="prefooter-note" data-reveal>Prefer the phone? Call or text <a href="tel:+17867909217">786.790.9217</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- ===================================================== footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 332 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Continuum Aesthetics">
+          <path d="M30 32 C25.6 24 18.6 20 12.6 20 C5.4 20 0 25.4 0 32 C0 38.6 5.4 44 12.6 44 C18.6 44 25.6 40 30 32 C34.4 24 41.4 20 47.4 20 C54.6 20 60 25.4 60 32 C60 38.6 54.6 44 47.4 44 C41.4 44 34.4 40 30 32 Z" transform="translate(2 0)" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <text x="76" y="37" font-family="Jost, sans-serif" font-size="23" font-weight="500" letter-spacing="5.5" fill="currentColor">CONTINUUM</text>
+          <text x="77" y="56" font-family="Jost, sans-serif" font-size="10.5" font-weight="400" letter-spacing="7.2" opacity="0.78" fill="currentColor">AESTHETICS</text>
+        </svg>
+        <p>Physician-led aesthetic and wellness medicine in Brickell, Miami. Subtle results, medical standards, every chapter.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="#treatments">Treatments</a></li><li><a href="#method">The Method</a></li><li><a href="#doctor">Dr. Brunson</a></li><li><a href="#financing">Financing</a></li><li><a href="#book">Book</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+17867909217">786.790.9217</a></li><li><a href="https://wa.me/17867909217" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:info@continuumaesthetics.com">info@continuumaesthetics.com</a></li><li><a href="https://www.instagram.com/continuumaesthetics" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+      <div class="footer-col"><h4>Visit</h4><address>175 SW 7th Street, Suite 1411<br>Miami, FL 33130<br>Brickell</address><p style="color:var(--muted);font-size:12.5px;margin-top:14px">By appointment only. Complimentary valet.</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Continuum Aesthetics. All Rights Reserved.</p>
+      <p>Individual results may vary. All treatments are performed under physician supervision following an in-person consultation.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================================================== whatsapp float -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-panel">
+    <div class="wa-panel-head">
+      <div class="wa-avatar"><svg viewBox="0 0 64 36" width="44"><path d="M32 18 C27.6 10 20.6 6 14.6 6 C7.4 6 2 11.4 2 18 C2 24.6 7.4 30 14.6 30 C20.6 30 27.6 26 32 18 C36.4 10 43.4 6 49.4 6 C56.6 6 62 11.4 62 18 C62 24.6 56.6 30 49.4 30 C43.4 30 36.4 26 32 18 Z" fill="none" stroke="#E5C99A" stroke-width="2.6" stroke-linecap="round"/></svg><span class="online-dot"></span></div>
+      <div><strong>Start a conversation</strong><span>Continuum Aesthetics &middot; typically replies within minutes</span></div>
+    </div>
+    <div class="wa-panel-body">
+      <p>Questions about a treatment, financing or a good time to come in? Message us directly.</p>
+      <a class="wa-cta" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation%20at%20Continuum%20Aesthetics" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Chat on WhatsApp</a>
+      <a class="wa-sms" href="sms:+17867909217">Prefer SMS? Text us instead</a>
+    </div>
+  </div>
+  <button class="wa-toggle" id="waToggle" aria-expanded="false" aria-label="Chat with us on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    <span>Questions? Chat with us</span>
+  </button>
+</div>
+
+<!-- ===================================================== mobile sticky bar -->
+<nav class="sticky-bar" aria-label="Quick actions">
+  <a class="sticky-book" href="#book"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>Book</a>
+  <a class="sticky-wa" href="https://wa.me/17867909217?text=Hi!%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = window.matchMedia('(pointer:fine)').matches;
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------------------------------------- WebGL liquid-gold hero */
+(function(){
+  const canvas = document.getElementById('gl');
+  let gl;
+  try { gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl'); } catch(e){}
+  if(!gl){ canvas.style.display='none'; return; }
+  const vert = `attribute vec2 p; void main(){ gl_Position = vec4(p,0.0,1.0); }`;
+  const frag = `
+    precision highp float;
+    uniform float u_time; uniform vec2 u_res; uniform vec2 u_mouse;
+    float hash(vec2 p){ p=fract(p*vec2(123.34,456.21)); p+=dot(p,p+45.32); return fract(p.x*p.y); }
+    float noise(vec2 p){ vec2 i=floor(p),f=fract(p);
+      float a=hash(i),b=hash(i+vec2(1.,0.)),c=hash(i+vec2(0.,1.)),d=hash(i+vec2(1.,1.));
+      vec2 u=f*f*(3.-2.*f); return mix(a,b,u.x)+(c-a)*u.y*(1.-u.x)+(d-b)*u.x*u.y; }
+    float fbm(vec2 p){ float v=0.,a=0.5; for(int i=0;i<6;i++){ v+=a*noise(p); p*=2.0; a*=0.5; } return v; }
+    void main(){
+      vec2 uv = gl_FragCoord.xy/u_res.xy;
+      vec2 p = uv; p.x *= u_res.x/u_res.y;
+      float t = u_time*0.045;
+      vec2 q = vec2(fbm(p+vec2(0.0,t)), fbm(p+vec2(5.2,1.3-t)));
+      vec2 r = vec2(fbm(p+4.0*q+vec2(1.7,9.2)+t*0.5), fbm(p+4.0*q+vec2(8.3,2.8)-t*0.3));
+      float f = fbm(p+4.0*r);
+      float md = distance(uv, u_mouse);
+      f += smoothstep(0.6,0.0,md)*0.30;
+      vec3 ink=vec3(0.043,0.043,0.051), bronze=vec3(0.42,0.30,0.16), champ=vec3(0.86,0.70,0.42);
+      vec3 col = mix(ink,bronze, smoothstep(0.25,0.72,f));
+      col = mix(col,champ, smoothstep(0.66,0.97,f+r.x*0.3));
+      col += champ*pow(max(0.,r.y),3.0)*0.22;
+      float vig = smoothstep(1.2,0.25,length(uv-0.5));
+      col *= vig*0.92+0.08;
+      gl_FragColor = vec4(col,1.0);
+    }`;
+  function sh(t,s){ const o=gl.createShader(t); gl.shaderSource(o,s); gl.compileShader(o); return o; }
+  const prog=gl.createProgram();
+  gl.attachShader(prog,sh(gl.VERTEX_SHADER,vert)); gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,frag));
+  gl.linkProgram(prog); gl.useProgram(prog);
+  const buf=gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  const loc=gl.getAttribLocation(prog,'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  const uT=gl.getUniformLocation(prog,'u_time'), uR=gl.getUniformLocation(prog,'u_res'), uM=gl.getUniformLocation(prog,'u_mouse');
+  let mouse=[0.7,0.65], tMouse=[0.7,0.65];
+  function resize(){ const dpr=Math.min(window.devicePixelRatio||1,1.6);
+    canvas.width=canvas.clientWidth*dpr; canvas.height=canvas.clientHeight*dpr; gl.viewport(0,0,canvas.width,canvas.height); }
+  window.addEventListener('resize',resize); resize();
+  window.addEventListener('pointermove',e=>{ tMouse=[e.clientX/window.innerWidth, 1-e.clientY/window.innerHeight]; });
+  const start=performance.now();
+  function render(now){
+    mouse[0]+=(tMouse[0]-mouse[0])*0.04; mouse[1]+=(tMouse[1]-mouse[1])*0.04;
+    gl.uniform1f(uT,(now-start)/1000); gl.uniform2f(uR,canvas.width,canvas.height); gl.uniform2f(uM,mouse[0],mouse[1]);
+    gl.drawArrays(gl.TRIANGLES,0,3);
+    if(!reduceMotion) requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+})();
+
+/* ---------------------------------------- preloader */
+function startSite(){
+  document.body.classList.remove('loading');
+  const tl = gsap.timeline();
+  tl.to('#preNum',{innerText:100,duration:1.1,snap:{innerText:1},ease:'power2.out'},0)
+    .fromTo('#preloader .pre-mark path',{drawSVG:'0%'},{duration:1.1,ease:'power2.inOut',
+        onStart(){ const pth=document.querySelector('#preloader .pre-mark path'); const L=pth.getTotalLength();
+          pth.style.strokeDasharray=L; gsap.fromTo(pth,{strokeDashoffset:L},{strokeDashoffset:0,duration:1.1,ease:'power2.inOut'}); }},0)
+    .to('#preloader',{opacity:0,duration:.5,ease:'power2.out'},'+=0.15')
+    .set('#preloader',{display:'none'})
+    .to('#preCurtain',{scaleY:0,transformOrigin:'bottom',duration:.9,ease:'expo.inOut'},'-=0.1')
+    .set('#preCurtain',{display:'none'})
+    .add(heroIn,'-=0.5')
+    .to('#announce',{opacity:1,duration:.6},'-=0.2');
+}
+function heroIn(){
+  gsap.to('#heroKicker span',{y:0,opacity:1,duration:.9,ease:'expo.out'});
+  gsap.set('.hero h1 .word',{yPercent:115});
+  gsap.to('.hero h1 .word',{yPercent:0,duration:1.1,ease:'expo.out',stagger:.08});
+  gsap.to('[data-hero-fade]',{opacity:1,y:0,duration:1,ease:'power3.out',stagger:.12,delay:.45});
+}
+gsap.set('#heroKicker span',{y:24,opacity:0});
+gsap.set('[data-hero-fade]',{opacity:0,y:24});
+
+if(reduceMotion){
+  document.body.classList.add('no-anim','loading');
+  document.body.classList.remove('loading');
+  document.getElementById('preloader').style.display='none';
+  document.getElementById('preCurtain').style.display='none';
+  document.getElementById('announce').style.opacity=1;
+  gsap.set('#heroKicker span,[data-hero-fade]',{opacity:1,y:0});
+  gsap.set('.hero h1 .word',{yPercent:0});
+} else {
+  window.addEventListener('load',()=>setTimeout(startSite,200));
+  setTimeout(()=>{ if(document.body.classList.contains('loading')) startSite(); },2600);
+}
+
+/* ---------------------------------------- Lenis smooth scroll */
+let lenis;
+if(!reduceMotion){
+  lenis = new Lenis({duration:1.1,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t))});
+  lenis.on('scroll',()=>ScrollTrigger.update());
+  gsap.ticker.add(t=>lenis.raf(t*1000)); gsap.ticker.lagSmoothing(0);
+}
+/* anchor links through Lenis */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{ const id=a.getAttribute('href'); if(id.length<2) return;
+    const el=document.querySelector(id); if(!el) return; e.preventDefault();
+    document.getElementById('nav').classList.remove('open'); document.getElementById('navToggle').classList.remove('open');
+    if(lenis) lenis.scrollTo(el,{offset:-70}); else el.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ---------------------------------------- reveals */
+gsap.registerPlugin(ScrollTrigger);
+if(!reduceMotion){
+  ScrollTrigger.batch('[data-reveal]',{start:'top 86%',onEnter:b=>gsap.to(b,{opacity:1,y:0,duration:.9,ease:'power3.out',stagger:.09})});
+  /* image clip reveal */
+  document.querySelectorAll('[data-clip]').forEach(el=>{
+    gsap.to(el,{clipPath:'inset(0 0 0% 0)',duration:1.3,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 82%'}});
+  });
+  /* manifesto word-by-word */
+  const words = document.getElementById('manifesto').querySelectorAll('.reveal-word, .it');
+  /* wrap plain words */
+  const m=document.getElementById('manifesto');
+  m.innerHTML = m.innerHTML.replace(/(\b[\w'-]+\b)(?![^<]*>)/g, '<span class="reveal-word">$1</span>');
+  gsap.to('#manifesto .reveal-word',{opacity:1,duration:.5,stagger:.04,ease:'none',
+    scrollTrigger:{trigger:'#manifesto',start:'top 78%',end:'bottom 60%',scrub:true}});
+}
+
+/* ---------------------------------------- velocity marquee */
+if(!reduceMotion){
+  const track=document.getElementById('marquee'); let mx=0; const half=track.scrollWidth/2;
+  let vel=0;
+  if(lenis) lenis.on('scroll',({velocity})=>{ vel=velocity||0; });
+  gsap.ticker.add(()=>{ mx -= (1.0 + Math.abs(vel)*0.6); if(-mx>=half) mx=0; track.style.transform=`translateX(${mx}px)`; });
+}
+
+/* ---------------------------------------- method sticky scale */
+if(!reduceMotion && window.innerWidth>900){
+  gsap.utils.toArray('.method-card').forEach((card,i,arr)=>{
+    if(i===arr.length-1) return;
+    gsap.to(card,{scale:.92,filter:'brightness(.6)',ease:'none',
+      scrollTrigger:{trigger:card,start:'top 16%',end:'+=420',scrub:true}});
+  });
+}
+
+/* ---------------------------------------- horizontal treatments pin */
+if(!reduceMotion){
+  ScrollTrigger.matchMedia({
+    '(min-width:901px)':function(){
+      const track=document.getElementById('hTrack');
+      const dist=()=>track.scrollWidth - window.innerWidth + 80;
+      const tween=gsap.to(track,{x:()=>-dist(),ease:'none',
+        scrollTrigger:{trigger:'#treatments',start:'top top',end:()=>'+='+dist(),
+          scrub:1,pin:true,anticipatePin:1,invalidateOnRefresh:true,
+          onUpdate:s=>{ document.getElementById('hProgress').style.width=(8+s.progress*92)+'%'; }}});
+    }
+  });
+}
+
+/* ---------------------------------------- stats count-up */
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const target=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0);
+  ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:()=>{
+    gsap.to({v:0},{v:target,duration:1.6,ease:'power2.out',
+      onUpdate(){ el.textContent = dec? this.targets()[0].v.toFixed(dec) : Math.round(this.targets()[0].v); }});
+  }});
+});
+
+/* ---------------------------------------- header + announce on scroll */
+const header=document.getElementById('header');
+ScrollTrigger.create({start:'top -40',onUpdate:s=>header.classList.toggle('scrolled',s.scroll()>40)});
+
+/* ---------------------------------------- custom cursor + magnetic */
+if(fine && !reduceMotion){
+  const dot=document.querySelector('.cursor-dot'), ring=document.querySelector('.cursor-ring');
+  let rx=0,ry=0,dx=0,dy=0;
+  window.addEventListener('pointermove',e=>{ dx=e.clientX;dy=e.clientY; dot.style.transform=`translate(${dx}px,${dy}px) translate(-50%,-50%)`; });
+  gsap.ticker.add(()=>{ rx+=(dx-rx)*0.16; ry+=(dy-ry)*0.16; ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`; });
+  document.querySelectorAll('a,button,[data-cursor]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('hov'));
+  });
+  document.querySelectorAll('.magnetic').forEach(el=>{
+    el.addEventListener('pointermove',e=>{ const r=el.getBoundingClientRect();
+      gsap.to(el,{x:(e.clientX-r.left-r.width/2)*0.4,y:(e.clientY-r.top-r.height/2)*0.5,duration:.4,ease:'power3.out'}); });
+    el.addEventListener('pointerleave',()=>gsap.to(el,{x:0,y:0,duration:.5,ease:'elastic.out(1,.4)'}));
+  });
+}
+
+/* ---------------------------------------- nav + whatsapp toggles */
+const navToggle=document.getElementById('navToggle'), nav=document.getElementById('nav');
+navToggle.addEventListener('click',()=>{ const o=nav.classList.toggle('open'); navToggle.classList.toggle('open',o); navToggle.setAttribute('aria-expanded',o); });
+const waFloat=document.getElementById('waFloat'), waToggle=document.getElementById('waToggle');
+waToggle.addEventListener('click',()=>{ const o=waFloat.classList.toggle('open'); waToggle.setAttribute('aria-expanded',o); });
+document.addEventListener('click',e=>{ if(!waFloat.contains(e.target)) waFloat.classList.remove('open'); });
+setTimeout(()=>ScrollTrigger.refresh(),800);
+</script>
+</body>
+</html>
